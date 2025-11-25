@@ -11,7 +11,7 @@ router.get("/", (req, res) => {
 
 //Show(Prefisso del router spostato in server.js)
 router.get("/:id", (req, res) => {
-  res.send(`Qui il singolo post con id: ${req.params.id}`);
+  res.json(array_post.find((post) => post.id === parseInt(req.params.id))); //pareseInt necessario perchè i params arrivano come stringhe
 });
 
 //Store(Prefisso del router spostato in server.js)
