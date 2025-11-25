@@ -1,10 +1,12 @@
+const array_post = require("../Array_post");
+
 const express = require("express");
 
 const router = express.Router();
 
 //Index(Prefisso del router spostato in server.js)
 router.get("/", (req, res) => {
-  res.send("Qui lista dei posts");
+  res.json(array_post);
 });
 
 //Show(Prefisso del router spostato in server.js)
